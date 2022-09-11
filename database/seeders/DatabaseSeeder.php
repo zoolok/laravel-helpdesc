@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Sequence;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            RolesSeeder::class
+            RolesSeeder::class,
+            UserSeeder::class
         ]);
-        // \App\Models\User::factory(10)->create();
+
     }
 }

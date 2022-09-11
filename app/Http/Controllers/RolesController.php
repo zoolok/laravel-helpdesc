@@ -35,4 +35,9 @@ class RolesController extends Controller
         return response()->json(['data' => $role]);
     }
 
+    public function users(Role $role)
+    {
+        return $role->users;
+    }
+
 }
