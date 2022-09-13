@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     use HasFactory;
+
+    public function isNew()
+    {
+        return $this->status === 0;
+    }
 }
